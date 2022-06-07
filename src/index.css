@@ -6,4 +6,7 @@
     html {
         -webkit-tap-highlight-color: transparent;
     }
+    body {
+        touch-action: manipulation;
+    }
 }
