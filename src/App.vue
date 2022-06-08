@@ -201,7 +201,6 @@ function setSnapWords() {
 }
 
 function startGame() {
-    console.log('start game')
     currentWord.value = getNextWord()
     gameStatus.value = 'playing'
 }
