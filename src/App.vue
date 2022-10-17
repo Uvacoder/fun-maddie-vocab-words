@@ -149,6 +149,7 @@ import words from './constants/snap-words'
 
 const navigation = ref([
     { name: 'All', current: true },
+    { name: 'Preschool', current: false },
     { name: 'Kindergarten', current: false },
     { name: 'First', current: false },
 ])
@@ -193,7 +194,7 @@ function setSnapWords() {
     let key = activeItem.value.name.toLowerCase()
     if (key === 'all') {
         activeWordList.value = Array.from(
-            new Set([...words.kindergarten, ...words.first])
+            new Set([...words.preschool, ...words.kindergarten, ...words.first])
         )
     } else {
         activeWordList.value = [...words[key]]
