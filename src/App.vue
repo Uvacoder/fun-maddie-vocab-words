@@ -152,6 +152,7 @@ const navigation = ref([
     { name: 'Preschool', current: false },
     { name: 'Kindergarten', current: false },
     { name: 'First', current: false },
+    { name: 'Second', current: false },
 ])
 
 // active nav item
@@ -194,7 +195,12 @@ function setSnapWords() {
     let key = activeItem.value.name.toLowerCase()
     if (key === 'all') {
         activeWordList.value = Array.from(
-            new Set([...words.preschool, ...words.kindergarten, ...words.first])
+            new Set([
+                ...words.preschool,
+                ...words.kindergarten,
+                ...words.first,
+                ...words.second,
+            ])
         )
     } else {
         activeWordList.value = [...words[key]]
